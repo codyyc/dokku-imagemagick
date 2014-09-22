@@ -1,9 +1,9 @@
 #!/bin/bash
 set -e
 
-IMAGE="buildstep"
+IMAGE="progrium/buildstep"
 
-CMD="apt-get update && apt-get install -y imagemagick && apt-get update && apt-get install -y cutycap && apt-get update && apt-get install -y xvfb && apt-get clean"
+CMD="apt-get update && apt-get install -y imagemagick && apt-get update && apt-get install -y cutycapt && apt-get update && apt-get install -y xvfb && apt-get clean"
 
 ID=$(docker run -d $IMAGE /bin/sh -c "$CMD")
 docker attach $ID
